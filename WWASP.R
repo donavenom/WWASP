@@ -1372,4 +1372,9 @@ perc.missing = function(x) {sum(is.na(x)) / (length(x) *100)}
 missing.preCARS <- (apply(preCARS, # selects dataset
                           1, # 1 to select all rows or 2 to select all columns
                           perc.missing)) # the function that we created
-table(missing.preCARS)
+table(missing.preCAR)
+      
+      
+      
+      
+# This is fun
