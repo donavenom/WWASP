@@ -1,3 +1,5 @@
+# Push with the following:
+
 # update.packages(checkBuilt=TRUE, ask=FALSE)
 install.packages(c("devtools", "dplyr", "mice", "googledrive"))
 devtools::install_github(c("tidyverse/googlesheets4"))
@@ -1372,9 +1374,7 @@ perc.missing = function(x) {sum(is.na(x)) / (length(x) *100)}
 missing.preCARS <- (apply(preCARS, # selects dataset
                           1, # 1 to select all rows or 2 to select all columns
                           perc.missing)) # the function that we created
-table(missing.preCAR)
-      
-      
-      
-      
-# This is fun
+dplyr::tbl_df(baseWWASP)
+table(baseWWASP)
+dplyr::glimpse(baseWWASP)
+
