@@ -1,9 +1,8 @@
-# Push with the following:
+# Push with the following: git push origin master
 
-# update.packages(checkBuilt=TRUE, ask=FALSE)
-install.packages(c("devtools", "dplyr", "mice", "googledrive"))
-devtools::install_github(c("tidyverse/googlesheets4"))
-
+#update.packages(checkBuilt=TRUE, ask=FALSE)
+#install.packages(c("devtools", "dplyr", "mice", "googledrive"))
+#devtools::install_github(c("tidyverse/googlesheets4"))
 
 library(mice)
 library(googledrive)
@@ -17,6 +16,7 @@ library(googlesheets4)
 # If running R on a server (i.e. rstudio.cloud), run the following lines:
 # options(httr_oob_default = T)
 # drive_auth(new_user = T)
+sheets_auth(email = "donavenom@gmail.com")
 
 # Afterwards, find the file you want to read:
 googledrive::drive_find(pattern = "WWASPdata_working_v2", # only the istems whose names match this expression are returned
@@ -1377,4 +1377,3 @@ missing.preCARS <- (apply(preCARS, # selects dataset
 dplyr::tbl_df(baseWWASP)
 table(baseWWASP)
 dplyr::glimpse(baseWWASP)
-
